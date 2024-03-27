@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-27T12:19:41.032Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0" etag="gpNEBPPFRNVZ-mdCjSXi" version="24.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-27T14:12:55.625Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0" etag="XoSP9Dnr517a1b6aGHqs" version="24.2.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1888" dy="1185" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1373" dy="862" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -85,13 +85,8 @@
         <mxCell id="cAOWCEoVTnvoUcEwPBtx-56" value="&lt;b&gt;Polished genome assembly&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="230" y="480" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cAOWCEoVTnvoUcEwPBtx-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="cAOWCEoVTnvoUcEwPBtx-57" target="cAOWCEoVTnvoUcEwPBtx-83" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="320" y="590" />
-              <mxPoint x="510" y="590" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="UW_-jwb7laQlxRhLYha5-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="cAOWCEoVTnvoUcEwPBtx-57" target="UW_-jwb7laQlxRhLYha5-3">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cAOWCEoVTnvoUcEwPBtx-57" value="&lt;div&gt;Assembly Evaluation&lt;br&gt;&lt;/div&gt;&lt;i&gt;Quast&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="260" y="540" width="120" height="40" as="geometry" />
@@ -142,7 +137,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cAOWCEoVTnvoUcEwPBtx-77" value="&lt;div&gt;Differential Expression&lt;br&gt;&lt;/div&gt;&lt;i&gt;DESeq2/HTseq&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="450" y="750" width="120" height="40" as="geometry" />
+          <mxGeometry x="450" y="860" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="cAOWCEoVTnvoUcEwPBtx-87" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="cAOWCEoVTnvoUcEwPBtx-79" target="cAOWCEoVTnvoUcEwPBtx-86" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -154,7 +149,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cAOWCEoVTnvoUcEwPBtx-83" value="&lt;div&gt;Annotation&lt;br&gt;&lt;/div&gt;&lt;i&gt;BRAKER&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="450" y="610" width="120" height="40" as="geometry" />
+          <mxGeometry x="450" y="650" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="cAOWCEoVTnvoUcEwPBtx-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="cAOWCEoVTnvoUcEwPBtx-86" target="cAOWCEoVTnvoUcEwPBtx-83" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -166,10 +161,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cAOWCEoVTnvoUcEwPBtx-89" value="&lt;b&gt;Annotated Genome&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="445" y="680" width="130" height="30" as="geometry" />
+          <mxGeometry x="445" y="770" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="UW_-jwb7laQlxRhLYha5-0" value="&lt;div&gt;Visualisation&lt;/div&gt;&lt;div&gt;&lt;i&gt;IGV&lt;/i&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="450" y="830" width="120" height="40" as="geometry" />
+          <mxGeometry x="450" y="940" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UW_-jwb7laQlxRhLYha5-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="UW_-jwb7laQlxRhLYha5-3" target="cAOWCEoVTnvoUcEwPBtx-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UW_-jwb7laQlxRhLYha5-3" value="Assembly fine-tuning&lt;br&gt;&lt;i&gt;Repeatmasker&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="260" y="600" width="120" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
