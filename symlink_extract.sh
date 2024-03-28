@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Source directory containing the files
-SOURCE_DIR="/proj/uppmax2024-2-7/Genome_Analysis/4_Tean_Teh_2017/illumina_data"
+SOURCE_DIR="/proj/uppmax2024-2-7/Genome_Analysis/4_Tean_Teh_2017/transcriptome/trimmed"
 
 # Target directory for the symbolic links
-TARGET_DIR="/home/victoe/Genome_analysis/Data/RawData/PacBio"
+TARGET_DIR="/home/victoe/Genome_analysis/Data/PreprocessedData/TrimmedReads"
 
 # Pattern to match the desired files
 PATTERN="*scaffold_10*.fastq.gz"
