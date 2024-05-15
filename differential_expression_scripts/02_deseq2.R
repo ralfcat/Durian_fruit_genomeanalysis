@@ -3,11 +3,11 @@ library(tidyverse)
 
 setwd("/home/victoe/Genome_analysis/Data/DifferentialExpression")
 
-# Load the metadata
+#metadata
 metadata_path <- "/home/victoe/Genome_analysis/Data/Metadata/Metadata.csv"
 metadata <- read.csv(metadata_path)
 
-# List all count files
+#lists all count files
 count_files <- list.files(pattern="*.txt$")
 if (length(count_files) == 0) {
   stop("No count files found. Check the file path and pattern.")
@@ -21,7 +21,7 @@ count_data_list <- lapply(count_files, function(file) {
   }
   counts <- read.table(filepath, header=FALSE, col.names=c("gene", "counts"))
 
-  # Exclude rows that do not represent typical gene identifiers
+  #remove the rows in the count files that are not necessary
   valid_genes <- !grepl("^__", counts$gene)  # genes not starting with "__"
   counts <- counts[valid_genes, ]
 
@@ -30,21 +30,21 @@ count_data_list <- lapply(count_files, function(file) {
 })
 names(count_data_list) <- gsub(".txt$", "", count_files)
 
-# Ensure the order of count files matches the metadata
+
 metadata <- metadata[match(names(count_data_list), metadata$Run),]
 if (anyNA(metadata)) {
   stop("Some samples in metadata do not have matching count files.")
 }
 
-# Create a count matrix
+#count matrix
 count_matrix <- do.call(cbind, count_data_list)
 
-# Create a DataFrame for sample conditions
+
 conditions <- factor(metadata$tissue)
 coldata <- DataFrame(condition = conditions)
 rownames(coldata) <- names(count_data_list)
 
-# Construct a DESeqDataSet object
+
 dds <- DESeqDataSetFromMatrix(countData = count_matrix,
                               colData = coldata,
                               design = ~ condition)
@@ -55,19 +55,16 @@ dds <- DESeq(dds)
 # Extract results
 res <- results(dds)  # This calls the results function and stores the output in 'res'
 
-# Save the results to a CSV file
+
 write.csv(as.data.frame(res), file.path(getwd(), "DESeq2_results.csv"))  # Convert 'res' to a dataframe and save it
 
-# Creating plots, such as MA plot
-plotMA(dds, main="MA-plot, treatment vs control")  # 'plotMA' function should take 'dds', not 'res'
 
-# Preparing data for the volcano plot
-res_df <- as.data.frame(res)  # Convert 'res' to a data frame for plotting
+res_df <- as.data.frame(res)  
 
-# Adding a 'diffexpressed' column based on log2 fold change and adjusted p-values
+#adding a 'diffexpressed' column based on log2 fold change and adjusted p-values
 res_df$diffexpressed <- ifelse(res_df$log2FoldChange >= 0.6 & res_df$padj < 0.05, "Upregulated",
                                ifelse(res_df$log2FoldChange <= -0.6 & res_df$padj < 0.05, "Downregulated", "Not significant"))
-# Example to label only significantly upregulated genes
+
 res_df$delabel <- ifelse(res_df$diffexpressed == "Upregulated", as.character(res_df$gene), "")
 
 
@@ -78,7 +75,7 @@ library(ggplot2)
 library(ggrepel)
 library(RColorBrewer)
 
-# Prepare the final plot with correct column names and classifications
+#plots the volcano plot
 volcano_plot <- ggplot(res_df, aes(x = log2FoldChange, y = -log10(padj), col = diffexpressed, label = delabel)) +
   geom_vline(xintercept = c(-0.6, 0.6), col = "gray", linetype = 'dashed') +
   geom_hline(yintercept = -log10(0.05), col = "gray", linetype = 'dashed') +
@@ -92,6 +89,6 @@ volcano_plot <- ggplot(res_df, aes(x = log2FoldChange, y = -log10(padj), col = d
   ggtitle('Durian fruit volcano plot') +
   geom_text_repel(max.overlaps = Inf)
 
-# Save and display the plot
+
 ggsave("volcano_plot_best.png", plot = volcano_plot, width = 10, height = 8)
 
