@@ -10,10 +10,8 @@
 #SBATCH --output=eggnog_func_annotation.%j.out
 
 
-# Load Conda environment or modules
 module load bioinfo-tools
 module load eggNOG-mapper/2.1.9
-# Define directory for your input file and output results
 INPUT_DIR="/home/victoe/Genome_analysis/Data/Annotation/functional_annotation/output_proteins.fasta"
 OUTPUT_DIR="/home/victoe/Genome_analysis/Data/Annotation/functional_annotation/eggnog_map"
 
