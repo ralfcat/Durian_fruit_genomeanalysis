@@ -15,10 +15,9 @@ module load htseq/2.0.2
 cd /home/victoe/Genome_analysis/Data/Annotation/star_mapping3
 
 
-# Define BAM file array
+#specify dir to bam_files
 BAM_FILES=(./SRR*_scaffold_Aligned.sortedByCoord.out.bam)
 
-# Count reads per gene using HTSeq
 for BAM in "${BAM_FILES[@]}"; do
     echo "Processing $BAM"
     htseq-count -f bam -r pos -s no -t exon -i gene_id \
