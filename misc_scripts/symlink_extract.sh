@@ -1,18 +1,17 @@
 #!/bin/bash
 
-# Source directory containing the files
+#source dir
 SOURCE_DIR="/proj/uppmax2024-2-7/Genome_Analysis/4_Tean_Teh_2017/transcriptome/untrimmed"
 
-# Target directory for the symbolic links
+#target directory for the symbolic links
 TARGET_DIR="/home/victoe/Genome_analysis/Data/RawData/Illumina/RNAseq"
 
-# Pattern to match the desired files
+#pattern to match the desired files
 PATTERN="*scaffold_10*.fastq.gz"
 
-# Change to the source directory
+
 cd "$SOURCE_DIR"
 
-# Create symbolic links in the target directory for matching files
 for file in $PATTERN; do
     ln -s "$(pwd)/$file" "$TARGET_DIR/"
 done
