@@ -12,7 +12,7 @@
 module load bioinfo-tools
 module load trimmomatic/0.39
 
-# Define your input/output directories
+#directories
 INPUT_DIR=/home/victoe/Genome_analysis/Data/RawData/Illumina/RNAseq
 OUTPUT_DIR=/home/victoe/Genome_analysis/Data/RawData/Illumina/RNAseq/Trimmed_reads
 ADAPTERS=/home/victoe/Genome_analysis/Code/preprocessing_scripts/TrueSeq2.fa
