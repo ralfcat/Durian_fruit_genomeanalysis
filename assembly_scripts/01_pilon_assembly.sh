@@ -12,7 +12,7 @@
 module load bioinfo-tools
 module load Pilon/1.24 
 
-# Set paths
+
 ASSEMBLY_PATH=/home/victoe/Genome_analysis/Data/Assembly/PacBioAssembly/assembly.fasta
 BAM_DIR=/home/victoe/Genome_analysis/IlluminaAssembly/BWA_alignment/SRR6058604_scaffold_10.sorted.bam
 OUT_DIR=/home/victoe/Genome_analysis/Data/Polishing/Pilon_polished
