@@ -9,12 +9,12 @@
 #SBATCH --mail-user victor.englof.5352@student.uu.se  
 #SBATCH --output=BWA_alignment.%j.out 
 
-# Load required modules
+
 module load bioinfo-tools
 module load bwa/0.7.17                
 module load samtools/1.10             
 
-# Set your assembly path
+# path to assembly
 ASSEMBLY_PATH=/home/victoe/Genome_analysis/Data/Assembly/PacBioAssembly/assembly.fasta
 
 # Check if the assembly is indexed; if not, index it
@@ -22,15 +22,15 @@ if [ ! -f $ASSEMBLY_PATH.bwt ]; then
     bwa index $ASSEMBLY_PATH
 fi
 
-# Specify your read files
+#path to read files
 READ1=/home/victoe/Genome_analysis/Data/RawData/Illumina/WGS/SRR6058604_scaffold_10.1P.fastq.gz
 READ2=/home/victoe/Genome_analysis/Data/RawData/Illumina/WGS/SRR6058604_scaffold_10.2P.fastq.gz
 
-# Output directory for BAM files
+#output dir
 OUT_DIR=/home/victoe/Genome_analysis/Data/Assembly/IlluminaAssembly/BWA_alignment
 mkdir -p $OUT_DIR
 
-# Specify the output BAM file name
+# output file name
 SAMPLE_NAME="SRR6058604_scaffold_10"
 BAM_FILE=$OUT_DIR/${SAMPLE_NAME}.sorted.bam
 
