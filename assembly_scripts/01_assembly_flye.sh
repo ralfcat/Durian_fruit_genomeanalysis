@@ -9,11 +9,11 @@
 #SBATCH --mail-user victor.englof.5352@student.uu.se  # Your email address.
 #SBATCH --output=Flye_Assembly.%j.out  # Standard output and error log.
 
-# Load required modules
-module load bioinfo-tools
-module load Flye/2.9.1           # Adjust to the version of Flye available on your system.
 
-# Run Flye assembly
+module load bioinfo-tools
+module load Flye/2.9.1          
+
+#run the assembly
 flye --pacbio-raw /home/victoe/Genome_analysis/Data/RawData/PacBio/SRR6037732_scaffold_10.fq.gz \
      --out-dir /home/victoe/Genome_analysis/Data/Assembly/PacBioAssembly \
      --threads 4                 # Match this to the number of cores requested with -n.
