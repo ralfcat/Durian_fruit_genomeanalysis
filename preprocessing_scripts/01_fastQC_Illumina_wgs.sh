@@ -9,14 +9,12 @@
 #SBATCH --mail-user victor.englof.5352@student.uu.se # Your email address.
 #SBATCH --output=%x.%j.out       # Standard output and error log.
 
-# Load required modules
 module load bioinfo-tools
-module load FastQC/0.11.9  # Assuming FastQC is the correct module name. Adjust as necessary.
+module load FastQC/0.11.9  
 
-#Run FastQC on your desired file with specified number of threads
-# Replace 'yourfile.fastq.gz' with the path to your actual file and 'output_directory/' with your desired output directory.
 input_file="/home/victoe/Genome_analysis/Data/RawData/Illumina/WGS/SRR6058604_scaffold_10.2P.fastq.gz"
 output_directory="/home/victoe/Genome_analysis/Data/PreprocessedData/QualityChecked"
 
+#running fastqc
 fastqc $input_file -o $output_directory -t 2
 
