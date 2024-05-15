@@ -15,7 +15,7 @@ module load star/2.7.11a
 #set paths
 GENOME_DIR=/home/victoe/Genome_analysis/Data/Annotation/star_index3 
 GENOME_FASTA_FILES=/home/victoe/Genome_analysis/Data/Polishing/repeatmasker/pilon_polished.fasta.masked
-READ_LENGTH=252  # The length of your RNA-Seq reads.
+READ_LENGTH=252  
 
 
 #generate the STAR genome index
