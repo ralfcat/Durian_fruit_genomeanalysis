@@ -16,5 +16,6 @@ POLISHED_ASSEMBLY_PATH=/home/victoe/Genome_analysis/Data/Polishing/Pilon_polishe
 OUT_DIR=/home/victoe/Genome_analysis/Data/Polishing/quast_eval
 FLYE_ASSEMBLY_PATH=/home/victoe/Genome_analysis/Data/Assembly/PacBioAssembly/assembly.fasta
 
+#running quast
 quast.py $POLISHED_ASSEMBLY_PATH  -o $OUT_DIR
 
